@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Math Trivia",
+    "description": "A trivia app for basic math operations like sums and divisions",
+    "url": "/apps/math-trivia",
+    "preview": "previews/math-trivia.png"
+  },
+  {
+    "title": "Chronometer",
+    "description": "A simple chronometer with a play and stop button",
+    "url": "/apps/chronometer",
+    "preview": "previews/chronometer.png"
+  },
+  {
+    "title": "Random number",
+    "description": "A random number generator with a bottom and upper limit",
+    "url": "/apps/random-number",
+    "preview": "previews/random-number.png"
+  },
+  {
+    "title": "Random Image",
+    "description": "A random image generator for your background",
+    "url": "/apps/random-image",
+    "preview": "previews/random-image.png"
+  }
+]

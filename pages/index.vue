@@ -6,7 +6,7 @@
       <li v-for="app in apps" :key="app.url">
         <nuxt-link :to="app.url">
           <article>
-            <img alt="preview">
+            <img :src="app.preview" alt="preview">
 
             <main>
               <h6>{{ app.title }}</h6>
@@ -21,33 +21,13 @@
 </template>
 
 <script>
+import apps from '@/assets/json/apps.json';
+
 export default {
   name: "Index",
   data() {
     return {
-      apps: [
-        {
-          title: "Math Trivia",
-          description: "A trivia app for basic math operation",
-          url: "/apps/math-trivia",
-        },
-        {
-          title: "Chronometer",
-          description: "A simple chronometer with a play and stop button",
-          url: "/apps/chronometer",
-        },
-        {
-          title: "Random number",
-          description:
-            "A random number generator with a bottom and upper limit",
-          url: "/apps/random-number",
-        },
-        {
-          title: "Random Image",
-          description: "A random image generator for your background",
-          url: "/apps/random-image",
-        },
-      ],
+      apps: apps,
     };
   },
   created() {
@@ -67,18 +47,40 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   column-gap: 1rem;
   row-gap: 1.5rem;
+  margin: 0 3vw 6vh 3vw;
+}
+
+a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 article {
-  background: #eaeaea;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 5px #0000000e, 0 0 0 1px #99d98c54;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 article main {
-  padding: 0.25rem 0.5rem;
+  padding: 1rem 0.75rem 1.25rem;
+  background: #f8f8f8;
+  flex: 1;
+}
+
+article img {
+  height: 13rem;
+  width: 100%;
+  object-fit: contain;
 }
 
 article h6 {
   font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 0.35em;
 }
 </style>
