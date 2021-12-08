@@ -8,6 +8,14 @@
           <p>A simple chronometer with a play and stop button</p>
         </article>
       </li>
+
+      <li>
+        <article>
+          <h6>Random Number</h6>
+
+          <p>A random number generator with a bottom and upper limit</p>
+        </article>
+      </li>
     </ul>
   </div>
 </template>
@@ -19,7 +27,7 @@ export default {}
 <style scoped>
 ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
 article h6 {
