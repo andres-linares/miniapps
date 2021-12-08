@@ -75,9 +75,8 @@ export default {
 
 <style scoped>
 .chronometer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
 .output {
@@ -128,27 +127,12 @@ button:focus {
 .actions {
   margin-top: 2.5vh;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  column-gap: 5vw;
 }
 </style>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: grid;
-  place-items: center;
-}
 </style>
