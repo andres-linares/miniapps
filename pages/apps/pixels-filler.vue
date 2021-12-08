@@ -40,8 +40,8 @@ export default {
         const span = document.createElement('span');
 
         const h = 110;
-        const s = Math.round(Math.random() * 100);
-        const l = Math.round(Math.random() * 100);
+        const s = Math.round(Math.random() * 70 + 30);
+        const l = Math.round(Math.random() * 75 + 20);
 
         span.style.background = `hsl(${h}, ${s}%, ${l}%)`;
 
