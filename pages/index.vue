@@ -1,5 +1,7 @@
 <template>
   <div>
+    <the-header />
+
     <ul>
       <li v-for="app in apps" :key="app.url">
         <nuxt-link :to="app.url">
@@ -48,6 +50,14 @@ export default {
       ],
     };
   },
+  created() {
+    this.$store.commit('setTitle', 'The Collection');
+  },
+  head() {
+    return {
+      title: 'MiniApps! - Collection'
+    }
+  }
 };
 </script>
 
