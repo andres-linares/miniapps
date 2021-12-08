@@ -44,6 +44,9 @@ export default {
       return `${hours}:${minutes}:${seconds}.${hundreths}`;
     },
   },
+  created() {
+    this.$store.commit('setTitle', this.$metaInfo.title);
+  },
   beforeDestroy() {
     if (this.interval) clearInterval(this.interval);
   },

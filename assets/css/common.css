@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto+Mono&display=swap");
 
 html {
   font-family: 'Nunito', sans-serif;
@@ -10,6 +10,8 @@ html {
   --font-size-xxl: 1.953rem;
   --font-size-xxxl: 2.441rem;
   --font-size-xxxxl: 3.052rem;
+
+  --color-primary: #99d98c;
 }
 
 h1 {
@@ -34,4 +36,13 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+button {
+  transition: transform 250ms ease-out;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
 }

@@ -23,3 +23,7 @@ button,
 input {
   font: inherit;
 }
+
+button {
+  cursor: pointer;
+}
