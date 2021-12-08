@@ -25,6 +25,11 @@ export default {
     return {
       apps: [
         {
+          title: "Math Trivia",
+          description: "A trivia app for basic math operation",
+          url: "/apps/math-trivia",
+        },
+        {
           title: "Chronometer",
           description: "A simple chronometer with a play and stop button",
           url: "/apps/chronometer",
