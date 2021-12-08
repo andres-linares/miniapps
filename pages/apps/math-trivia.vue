@@ -19,8 +19,8 @@
       />
     </form>
 
-    <div v-if="resultStatus" class="notification" :class="resultStatus">
-      {{ resultStatus === 'good' ? 'Great!' : 'Almost!' }}
+    <div class="notification" ref="notification">
+      {{ resultStatus === "good" ? "Great!" : "Almost!" }}
     </div>
   </div>
 </template>
@@ -36,7 +36,8 @@ export default {
       result: null,
       userResult: "",
       level: 1,
-      resultStatus: null
+      resultStatus: null,
+      notificationTimeout: null
     };
   },
   computed: {
@@ -53,19 +54,30 @@ export default {
   },
   methods: {
     checkResult() {
+      if (this.userResult === '') return;
+
+      if (this.notificationTimeout) clearTimeout(this.notificationTimeout);
+      this.$refs.notification.classList.remove('good', 'bad', 'disappear');
+
       if (this.userResult === this.result) {
         this.level++;
         this.generateOperation();
         this.userResult = "";
 
-        this.resultStatus = 'good';
+        this.resultStatus = "good";
       } else {
         this.level = this.level - 2 <= 1 ? 1 : this.level - 2;
         this.generateOperation();
-        this.userResult = '';
+        this.userResult = "";
 
-        this.resultStatus = 'bad';
+        this.resultStatus = "bad";
       }
+
+      this.$refs.notification.classList.add(this.resultStatus);
+      this.$refs.notification.classList.add("disappear");
+      this.notificationTimeout = setTimeout(() => {
+        this.$refs.notification.classList.remove("disappear");
+      }, 1500);
     },
     generateOperator() {
       const operators = {
@@ -130,7 +142,7 @@ export default {
   max-width: 4em;
   height: 100%;
   justify-content: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .operation .operation-content {
@@ -146,11 +158,19 @@ export default {
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
   padding: 0.5em 0;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.notification.disappear {
+  transform: translateY(0);
+  opacity: 1;
   animation: disappear 1.5s ease-in forwards;
 }
 
 @keyframes disappear {
   to {
+    transform: translateY(100%);
     opacity: 0;
   }
 }
