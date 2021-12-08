@@ -1,5 +1,11 @@
 [
   {
+    "title": "Pixels Filler",
+    "description": "A simple artistic app that will convert your screen in a canvas",
+    "url": "/apps/pixels-filler",
+    "preview": "previews/pixels-filler.png"
+  },
+  {
     "title": "Scrabble Solver",
     "description": "A scrabble word finder that finds words with your letters",
     "url": "/apps/scrabble-solver",
