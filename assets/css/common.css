@@ -3,3 +3,35 @@
 html {
   font-family: 'Nunito', sans-serif;
 }
+
+:root {
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.563rem;
+  --font-size-xxl: 1.953rem;
+  --font-size-xxxl: 2.441rem;
+  --font-size-xxxxl: 3.052rem;
+}
+
+h1 {
+  font-size: var(--font-size-xxxxl);
+}
+
+h2 {
+  font-size: var(--font-size-xxxl);
+}
+
+h3 {
+  font-size: var(--font-size-xxl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-l)
+}
+
+h6 {
+  font-size: 1rem;
+}
