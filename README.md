@@ -1,4 +1,8 @@
-# miniapps
+# MiniApps! - The Collection
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dbf88dc7-1765-4f71-bac5-f80d419bcfda/deploy-status)](https://app.netlify.com/sites/practical-lewin-6b4f8d/deploys)
+
+Check the production website here [MiniApps! - The Collection](http://miniapps.iamlinares.com/)
 
 ## Build Setup
 
