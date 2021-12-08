@@ -27,23 +27,3 @@ article h6 {
   font-weight: 700;
 }
 </style>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Mono&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: 'Nunito', sans-serif;
-}
-</style>

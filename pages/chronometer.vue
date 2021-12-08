@@ -131,7 +131,6 @@ button:focus {
 </style>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
