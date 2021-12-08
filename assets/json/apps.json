@@ -1,7 +1,7 @@
 [
   {
     "title": "Math Trivia",
-    "description": "A trivia app for basic math operations like sums and divisions",
+    "description": "A trivia app for basic math operations like sums",
     "url": "/apps/math-trivia",
     "preview": "previews/math-trivia.png"
   },

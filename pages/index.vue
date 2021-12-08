@@ -45,7 +45,7 @@ export default {
 ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  column-gap: 1rem;
+  column-gap: clamp(1rem, 2vw, 1.75rem);
   row-gap: 1.5rem;
   margin: 0 3vw 6vh 3vw;
 }
@@ -82,5 +82,6 @@ article h6 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.35em;
+  letter-spacing: 0.01em;
 }
 </style>
