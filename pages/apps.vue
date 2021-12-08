@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="apps-container">
     <header>
       <nuxt-link class="logo" to="/">
         MiniApps!
@@ -30,6 +30,17 @@ export default {
 </script>
 
 <style scoped>
+.apps-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.apps-container > main {
+  flex: 1;
+  width: 100%;
+}
+
 header {
   min-height: 4rem;
   background: var(--color-primary);

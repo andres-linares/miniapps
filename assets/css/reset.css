@@ -9,7 +9,9 @@ ol {
 }
 
 html,
-body {
+body,
+#__nuxt,
+#__layout {
   height: 100%;
 }
 
