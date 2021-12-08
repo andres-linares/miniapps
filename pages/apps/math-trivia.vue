@@ -18,6 +18,10 @@
         @blur="checkResult"
       />
     </form>
+
+    <div v-if="resultStatus" class="notification" :class="resultStatus">
+      {{ resultStatus === 'good' ? 'Great!' : 'Almost!' }}
+    </div>
   </div>
 </template>
 
@@ -32,6 +36,7 @@ export default {
       result: null,
       userResult: "",
       level: 1,
+      resultStatus: null
     };
   },
   computed: {
@@ -52,6 +57,14 @@ export default {
         this.level++;
         this.generateOperation();
         this.userResult = "";
+
+        this.resultStatus = 'good';
+      } else {
+        this.level = this.level - 2 <= 1 ? 1 : this.level - 2;
+        this.generateOperation();
+        this.userResult = '';
+
+        this.resultStatus = 'bad';
       }
     },
     generateOperator() {
@@ -123,6 +136,31 @@ export default {
 .operation .operation-content {
   display: flex;
   justify-content: space-between;
+}
+
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  text-align: center;
+  padding: 0.5em 0;
+  animation: disappear 1.5s ease-in forwards;
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+
+.notification.good {
+  background: var(--color-primary);
+}
+
+.notification.bad {
+  background: #f64949;
 }
 
 form,
