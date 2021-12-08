@@ -1,5 +1,11 @@
 [
   {
+    "title": "Scrabble Solver",
+    "description": "A scrabble word finder that finds words with your letters",
+    "url": "/apps/scrabble-solver",
+    "preview": "previews/scrabble-solver.png"
+  },
+  {
     "title": "Math Trivia",
     "description": "A trivia app for basic math operations like sums",
     "url": "/apps/math-trivia",

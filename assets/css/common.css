@@ -46,3 +46,12 @@ button:hover,
 button:focus {
   transform: scale(1.1);
 }
+
+button.button-primary {
+  background: var(--color-primary);
+  border: none;
+  padding: 0.35em 1.25em;
+  letter-spacing: 0.03em;
+  border-radius: 0.2em;
+  font-weight: 600;
+}
