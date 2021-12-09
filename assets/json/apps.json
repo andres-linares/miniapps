@@ -1,5 +1,11 @@
 [
   {
+    "title": "Clock",
+    "description": "Analog clock with real time indicators",
+    "url": "/apps/clock",
+    "preview": "previews/clock.png"
+  },
+  {
     "title": "Rotatory Images",
     "description": "Randomized images with randomized animations",
     "url": "/apps/rotatory-images",
