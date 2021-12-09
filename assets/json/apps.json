@@ -1,5 +1,11 @@
 [
   {
+    "title": "Where am I",
+    "description": "A simple map that will detect your current position",
+    "url": "/apps/where-am-i",
+    "preview": "previews/where-am-i.png"
+  },
+  {
     "title": "Meme templates",
     "description": "A meme templates collection for download",
     "url": "/apps/meme-templates",
