@@ -1,5 +1,11 @@
 [
   {
+    "title": "Meme templates",
+    "description": "A meme templates collection for download",
+    "url": "/apps/meme-templates",
+    "preview": "previews/meme-templates.png"
+  },
+  {
     "title": "Clock",
     "description": "Analog clock with real time indicators",
     "url": "/apps/clock",
