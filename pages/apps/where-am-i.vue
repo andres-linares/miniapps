@@ -60,7 +60,7 @@ export default {
           }, 1500);
         });
       }
-    }
+    },
   },
   head() {
     return {
