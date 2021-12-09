@@ -47,7 +47,7 @@ export default {
 
       this.lastTimeout = setTimeout(() => {
         this.fetchFact();
-      }, lastfact.length * 60);
+      }, lastfact.length * 40);
     }
   },
   head() {

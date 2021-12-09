@@ -1,7 +1,13 @@
 [
   {
-    "title": "Cats Facts!",
-    "description": "A collection of cats facts that you may love a lot",
+    "title": "Try to click me",
+    "description": "A simple button that does not want to be clicked on",
+    "url": "/apps/try-to-click-me",
+    "preview": "previews/try-to-click-me.png"
+  },
+  {
+    "title": "Cats Facts",
+    "description": "A collection of cats facts that you may love",
     "url": "/apps/cats-facts",
     "preview": "previews/cats-facts.png"
   },
