@@ -1,5 +1,5 @@
 <template>
-  <div :class="clicked">
+  <div :class="{ clicked }">
     <button
       ref="button"
       class="button-primary"
@@ -54,7 +54,7 @@ div.clicked {
 
 div.clicked::before {
   position: absolute;
-  content: 'You won';
+  content: "You won";
   font-size: 2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -74,12 +74,12 @@ button {
   padding: 0;
   display: grid;
   place-items: center;
-  transition: 150ms ease-in-out;
+  transition: 250ms ease-in-out;
   box-shadow: 3px 3px 7px 1px #00000014;
 }
 
 button:hover {
-  transform: scale(0.5);
+  transform: scale(0.75);
 }
 </style>
 
