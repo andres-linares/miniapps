@@ -5,7 +5,10 @@
 </template>
 
 <script>
-import { Map, View } from "ol";
+import { Map, View, Feature } from "ol";
+import { Vector as VectorLayer } from "ol/layer";
+import { Vector as VectorSource } from "ol/source";
+import { Point } from "ol/geom";
 import TileLayer from "ol/layer/Tile";
 import XYZ from "ol/source/XYZ";
 import { fromLonLat } from "ol/proj";
@@ -15,6 +18,7 @@ export default {
   data() {
     return {
       view: null,
+      map: null,
     };
   },
   created() {
@@ -31,7 +35,7 @@ export default {
         zoom: 2,
       });
 
-      new Map({
+      this.map = new Map({
         target: "map",
         layers: [
           new TileLayer({
@@ -52,6 +56,17 @@ export default {
           console.log(userPosition, globalPosition);
 
           this.view.setCenter(globalPosition);
+          this.map.addLayer(
+            new VectorLayer({
+              source: new VectorSource({
+                features: [
+                  new Feature({
+                    geometry: new Point(globalPosition),
+                  }),
+                ],
+              }),
+            })
+          );
 
           const interval = setInterval(() => {
             if (this.view.getZoom() > 17) clearInterval(interval);
