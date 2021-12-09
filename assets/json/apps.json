@@ -1,5 +1,11 @@
 [
   {
+    "title": "Rotatory Images",
+    "description": "Randomized images with randomized animations",
+    "url": "/apps/rotatory-images",
+    "preview": "previews/rotatory-images.png"
+  },
+  {
     "title": "Try to click me",
     "description": "A simple button that does not want to be clicked on",
     "url": "/apps/try-to-click-me",
